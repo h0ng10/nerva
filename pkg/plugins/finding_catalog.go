@@ -466,8 +466,8 @@ var findingCatalog = map[string]FindingMeta{
 	"dotnet-remoting-http-exposed": {
 		Title:          ".NET Remoting HTTP Channel Exposed",
 		Severity:       SeverityHigh,
-		Impact:         "The .NET Remoting HTTP channel performs no authentication or type filtering at the channel layer: an attacker who discovers a valid remoting object URI can submit a crafted serialized payload and achieve unauthenticated remote code execution via deserialization. Exploitation first requires identifying a valid object URI, which is why this finding is rated High rather than Critical.",
-		Recommendation: "Remove .NET Remoting endpoints from untrusted networks. Migrate affected services to WCF or ASP.NET Core with authenticated, type-filtered serialization. If the channel must remain, restrict network access to trusted segments and require custom authorization sinks.",
+		Impact:         "The .NET Remoting HTTP channel performs no authentication or type filtering at the channel layer: an attacker who discovers a valid remoting object URI can submit a crafted serialized payload and achieve unauthenticated remote code execution via deserialization. Exploitation first requires identifying a valid object URI.",
+		Recommendation: "Remove .NET Remoting endpoints from untrusted networks. Migrate affected services to WCF or .NET Core. If the channel must remain, restrict network access to trusted segments and require custom authorization sinks.",
 		CVSS:           "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
 	},
 
